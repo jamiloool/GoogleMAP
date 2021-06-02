@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEdwmh_sJ40fCJ5snigmWBuD-WuD3KOkA"
+    type="text/javascript"></script>
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <!---------------->
+
+
+  <!--FONT AWESOME-->
+  <script src="https://kit.fontawesome.com/05f602ff58.js" crossorigin="anonymous"></script>
+  <!---------------->
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/maps.css">
+
+  <title>E-learning Guide</title>
+</head>
+
+<body>
+
+  <div class="polygone1"></div>
+
+
+  <section>
+
+    <header>
+      <a href="#"><img src="images/Header Logo.png" class="header-logo"></a>
+      <a href="javascript:void(0);" class="mobileMenu" onclick="mobileMenu()"><i id="menu-icon"class="fa fa-bars"></i>
+        <ul class="links" id="links">
+          <li><a href="#"><span class="home">Accueil</span></a></li>
+          <li><a href="#apropos">A propos</a></li>
+          <li><a href="#contactez-nous">Contactez-nous</a></li>
+          <li><a href="#mapRef" class="ajouter-service"><i class="fas fa-map-marked-alt"></i>&nbsp;Commencer</a></li>
+        </ul>
+    </header>
+
+    <div class="contenu">
+      <div class="textBox">
+        <h2> BIENVENUE SUR<br>
+          <span class="elearningguide">
+            <span class="elearning">E-LEARNING</span>
+            <span class="guide">GUIDE</span>
+          </span>
+        </h2>
+        <a href="###" id="btn-video" style="background-color: transparent; color: #542e71;z-index: 1;" onclick="video('ouvrire')"><i class="far fa-play-circle"></i>&nbsp;Découvrir en vidéo comment utiliser le site</a>
+      </div>
+      <div class="imgBox">
+        <img src="images/Map.svg" class="mapIllustration">
+      </div>
+    </div>
+  </section>
+
+  <section id="video">
+    <div >
+      <button class="close-video" onclick="video('fermer')"><i class="fas fa-times-circle"></i></button>
+      <iframe id="vidFrame" class="vidFrame" width="700" height="394" src="https://www.youtube.com/embed/dBlJmi8JCEA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+  
+  <section class='btns'>
+    <h1 id="mapRef"><b>Localiser les établissements scolaires</b></h1>
+    
+    <div class="nouvelle-page-left">
+      <a href='cartes/etudeSuperieur.html' target="_blank"><i class="fas fa-external-link-alt"></i></a>
+      <a href='cartes/etudeSecondaire.html' target="_blank"><i class="fas fa-external-link-alt"></i></a>
+      <a href='cartes/etudesPrimaire.html' target="_blank"><i class="fas fa-external-link-alt"></i></a>
+    </div>
+    
+    <div class="services">
+      <a href='###' onclick="afficherMap('cartes/etudeSuperieur.html')"><b>Etudes<br>supérieur</b></a>
+      <a href='###' onclick="afficherMap('cartes/etudeSecondaire.html')"><b>Etudes<br>secondaire</b></a>
+      <a href='###' onclick="afficherMap('cartes/etudesPrimaire.html')"><b>Etudes<br>primaire</b></a>
+    </div>
+    
+    <div class="services-mobile">
+      <div class="dropdown">
+        <button class="button btn-typeEtab-mobile" type="button" data-toggle="dropdown"><i
+            class='fas fa-caret-down'></i>Type d'etablissements</i></button>
+        <ul class="dropdown-menu">
+          <li><label><input type="radio" name='type' id="publicCoche" onclick="afficherMap('cartes/etudeSuperieur.html')"><span>Etudes supérieur</span></label></li>
+          <hr>
+          <li><label><input type="radio" name='type' id="publicCoche" onclick="afficherMap('cartes/etudeSecondaire.html')"><span>Etudes secondaire</span></label></li>
+          <hr>
+          <li><label><input type="radio" name='type' id="publicCoche" onclick="afficherMap('cartes/etudesPrimaire.html')"><span>Etudes primaire</span></label></li>
+          <hr>
+          <li><label><input type="radio" name='type' id="publicCoche" onclick="afficherMap('cartes/CoursSoutien.html')"><span>Cours de soutien</span></label></li>
+          <hr>
+          <li><label><input type="radio" name='type' id="publicCoche" onclick="afficherMap('cartes/CentresLangue.html')"><span>Centres des langue</span></label></li>
+        </ul>
+      </div>      
+    </div>
+
+    <iframe id="iframe" src="cartes/homeMap.html"></iframe>
+
+    <div class="services">
+      <a href='###' onclick="afficherMap('cartes/CoursSoutien.html')"><b>Cours de<br>soutien</b></a>
+      <a href='###' onclick="afficherMap('cartes/CentresLangue.html')"><b>Centres<br>des langue</b></a>
+    </div>
+
+    <div class="nouvelle-page-right">
+      <a href='cartes/CoursSoutien.html' target="_blank"><i class="fas fa-external-link-alt"></i></a>
+      <a href='cartes/CentresLangue.html' target="_blank"><i class="fas fa-external-link-alt"></i></a>
+    </div>
+  </section>
+
+  <section class="apropos" id="apropos">
+    <div class="imgBox">
+      <img src="images/mapMap.svg" class="mapIllustration">
+    </div>
+    <div class="aproposText">
+      <h3>A propos</h3>
+      <p>Le site Web <span style="font-weight: bold;">E-learning 
+        <span style="color: #fb3640;">Guide</span></span> été créé afin de 
+        faciliter la localisation des services éducatifs existant dans votre 
+        ville ou bien dans autre une ville souhaité, y compris les cours de 
+        soutien, les établissements scolaires, etc.</p>
+    </div>
+    <div class="imgBoxMobile">
+      <img src="images/mapMap.svg" class="mapIllustration">
+    </div>
+  </section>
+
+  <section class="apropos" id="contactez-nous">
+    <div class="aproposText">
+      <h3>Contactez-nous</h3>
+      <p><i class="fas fa-map-marker-alt"></i> Vous pouvez nous contacter afin d'ajouter la localisation de vos
+        etablissements et services sur les map de notre site.</p>
+      <br>
+      <p><i class="fas fa-code"></i> Vous pouvez également nous contacter pour nous signaler un problème technique que
+        vous avez rencontré sur le site.</p>
+      <br>
+      <p><i class="fas fa-question-circle"></i> N'hésitez pas non plus à nous contacter pour nous donner votre
+        impression sut notre site.</p>
+      <img style="margin-top: 20px;" src="images/Contact.svg" class="mapIllustration">
+    </div>
+    <div class="container">
+      <form action="https://formspree.io/f/mayaegak" method="POST" id="my-form">
+
+        <div class="form-group">
+          <label for="firstName">Nom</label>
+          <input type="text" id="firstName" name="firstName">
+        </div>
+
+        <div class="form-group">
+          <label for="latsName">Prénom</label>
+          <input type="text" id="lastName" name="lastName">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+        </div>
+
+        <div class="form-group">
+          <label for="massage">Massage</label>
+          <textarea name="massage" id="massage" cols="30" rows="5"></textarea>
+        </div>
+
+        <button type="submit">Envoyer</button>
+      </form>
+      <div id="status"></div>
+    </div>
+    <script src="js/contact.js"></script>
+  </section>
+
+  <section class="team">
+    <h3 id="team">
+      - Réaliser par -
+    </h3>
+    <div class="teamdiv">
+      <div class="card">
+        <div class="content">
+          <div class="imgBx"><img src="images/jamil.png"></div>
+          <div class="contentBx">
+            <h3>Jamil Meftahi</h3>
+            <p>Etudiant en génie logiciel</p>
+            <div class="team-social-media">
+              <a href="###"><i class="fa fa-facebook"></i></a>
+              <a href="###"><i class="fa fa-twitter"></i></a>
+              <a href="###"><i class="fa fa-linkedin"></i></a>
+              <a href="###"><i class="fa fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="imgBx"><img src="images/rida.png"></div>
+          <div class="contentBx">
+            <h3>Mohamed Rida El Bakri</h3>
+            <p>Etudiant en génie logiciel</p>
+            <div class="team-social-media">
+              <a href="###"><i class="fa fa-facebook"></i></a>
+              <a href="###"><i class="fa fa-twitter"></i></a>
+              <a href="###"><i class="fa fa-linkedin"></i></a>
+              <a href="###"><i class="fa fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <div class="imgBx"><img src="images/hamid.png"></div>
+          <div class="contentBx">
+            <h3>Hamid Makhdach</h3>
+            <p>Etudiant en génie logiciel</p>
+            <div class="team-social-media">
+              <a href="###"><i class="fa fa-facebook"></i></a>
+              <a href="###"><i class="fa fa-twitter"></i></a>
+              <a href="###"><i class="fa fa-linkedin"></i></a>
+              <a href="###"><i class="fa fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <button onclick="topFunction()" id="top" title="Go to top"><img src="Icons/back-to-the-top.png" width="20px"></button>
+  <script src="js/script.js"></script>
+
+  <footer>
+
+    <div class="footer-contenu">
+
+      <img src="images/white-logo.svg" width="200px"></img>
+
+      <div class="footer-text">
+        <p class="footer-links">
+          <a href="#">Accueil</a>
+          ·
+          <a href="#apropos">A propos</a>
+          ·
+          <a href="#mapRef">Services</a>
+          ·
+          <a href="#contactez-nous">Contactez-nous</a>
+          ·
+          <a href="#team">Team</a>
+        </p>
+
+        <p class="footer-copyright">E-learning Guide © 2021</p>
+
+        <div class="footer-icons">
+
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-linkedin"></i></a>
+          <a href="#"><i class="fa fa-github"></i></a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </footer>
+</body>
+
+</html>
